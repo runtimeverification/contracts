@@ -6,12 +6,11 @@ import { LibDiamond } from "lifi/Libraries/LibDiamond.sol";
 import { DiamondCutFacet } from "lifi/Facets/DiamondCutFacet.sol";
 import { DiamondLoupeFacet } from "lifi/Facets/DiamondLoupeFacet.sol";
 import { OwnershipFacet } from "lifi/Facets/OwnershipFacet.sol";
-import { DSTest } from "ds-test/test.sol";
+import { Test } from "forge-std/Test.sol";
 import { Vm } from "forge-std/Vm.sol";
 
-contract LiFiDiamondTest is DSTest {
+contract LiFiDiamondTest is Test {
     // solhint-disable immutable-vars-naming
-    Vm internal immutable vm = Vm(HEVM_ADDRESS);
     LiFiDiamond public diamond;
     DiamondCutFacet public diamondCutFacet;
     OwnershipFacet public ownershipFacet;
